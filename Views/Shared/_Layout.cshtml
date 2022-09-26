@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MVCPortfolio.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <nav class="navbarr" style="">
+        <div class="nav_bar">
+            @* <div class="menu_icon border_radius">
+                <span class="menu_span abs"></span>
+                <span class="menu_span xyz"></span>
+                <span class="menu_span aaa"></span>
+            </div> *@
+            <svg class="nav_img" width="2212" height="689" viewBox="0 0 2212 689" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M382 249C382 266.386 380.442 283.407 377.457 299.933C361.81 386.568 306.968 459.577 232 500V249H382Z" fill="black"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M382 249C382 266.386 380.442 283.407 377.457 299.933C361.81 386.568 306.968 459.577 232 500V150C232 67.1573 299.157 0 382 0V249Z" fill="black"/>
+                <path d="M150 438C150 455.386 148.442 472.407 145.457 488.933C129.81 575.568 74.9684 648.577 0 689V438H150Z" fill="black"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M150 438C150 455.386 148.442 472.407 145.457 488.933C129.81 575.568 74.9684 648.577 0 689V339C0 256.157 67.1573 189 150 189V438Z" fill="black"/>
+                <circle cx="75" cy="75" r="75" fill="#6a38ab"/>
+                <path d="M669.941 576H584.98V259.008H669.941V576ZM580 176.977C580 164.281 584.199 153.832 592.598 145.629C601.191 137.426 612.812 133.324 627.461 133.324C641.914 133.324 653.438 137.426 662.031 145.629C670.625 153.832 674.922 164.281 674.922 176.977C674.922 189.867 670.527 200.414 661.738 208.617C653.145 216.82 641.719 220.922 627.461 220.922C613.203 220.922 601.68 216.82 592.891 208.617C584.297 200.414 580 189.867 580 176.977Z" fill="#6a38ab"/>
+                <path d="M796.316 576H711.355V126H796.316V576Z" fill="#6a38ab"/>
+                <path d="M912.73 259.008L915.367 294.457C937.828 266.918 968.199 253.148 1006.48 253.148C1047.3 253.148 1075.33 269.262 1090.56 301.488C1112.83 269.262 1144.57 253.148 1185.78 253.148C1220.15 253.148 1245.74 263.207 1262.54 283.324C1279.33 303.246 1287.73 333.324 1287.73 373.559V576H1202.77V373.852C1202.77 355.883 1199.25 342.797 1192.22 334.594C1185.19 326.195 1172.79 321.996 1155.02 321.996C1129.62 321.996 1112.05 334.105 1102.28 358.324L1102.57 576H1017.91V374.145C1017.91 355.785 1014.29 342.504 1007.07 334.301C999.84 326.098 987.535 321.996 970.152 321.996C946.129 321.996 928.746 331.957 918.004 351.879V576H833.336V259.008H912.73Z" fill="#6a38ab"/>
+                <path d="M1402.68 293.578C1425.14 266.625 1453.36 253.148 1487.35 253.148C1556.1 253.148 1590.96 293.09 1591.94 372.973V576H1507.27V375.316C1507.27 357.152 1503.36 343.773 1495.55 335.18C1487.74 326.391 1474.75 321.996 1456.59 321.996C1431.78 321.996 1413.81 331.566 1402.68 350.707V576H1318.01V126H1402.68V293.578Z" fill="#6a38ab"/>
+                <path d="M1812.65 543.773C1791.75 569.164 1762.84 581.859 1725.93 581.859C1691.95 581.859 1665.97 572.094 1648 552.562C1630.23 533.031 1621.14 504.418 1620.75 466.723V259.008H1705.42V463.793C1705.42 496.801 1720.46 513.305 1750.54 513.305C1779.25 513.305 1798.98 503.344 1809.72 483.422V259.008H1894.68V576H1814.99L1812.65 543.773Z" fill="#6a38ab"/>
+                <path d="M2211.19 420.434C2211.19 471.215 2200.35 510.863 2178.67 539.379C2156.99 567.699 2126.72 581.859 2087.85 581.859C2053.48 581.859 2026.04 568.676 2005.53 542.309L2001.72 576H1925.55V126H2010.21V287.426C2029.75 264.574 2055.43 253.148 2087.27 253.148C2125.94 253.148 2156.21 267.406 2178.09 295.922C2200.16 324.242 2211.19 364.184 2211.19 415.746V420.434ZM2126.52 414.281C2126.52 382.25 2121.45 358.91 2111.29 344.262C2101.13 329.418 2086 321.996 2065.88 321.996C2038.93 321.996 2020.37 333.031 2010.21 355.102V480.199C2020.57 502.465 2039.32 513.598 2066.46 513.598C2093.81 513.598 2111.78 500.121 2120.37 473.168C2124.47 460.277 2126.52 440.648 2126.52 414.281Z" fill="#6a38ab"/>
+            </svg>
+            
+            <div class="navigation">
+                <div class="nav_body">
+                    <ul>
+                        <li class='@(Url.RouteUrl(ViewContext.RouteData.Values) == "/" ? "active" : "")'>Home</li>
+                        <li class='@(Url.RouteUrl(ViewContext.RouteData.Values) == "/Blog" ? "active" : "")'>
+                            <a style="text-tecoration: none; color: black;" asp-controller="Blog" asp-action="Index">Blog</a>
+                        </li>
+                        <li>Portfolio</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="user_nav" style="display:flex ;">
+            @if(!User.Identity!.IsAuthenticated)
+            {
+
+                <li class="float: left; margin-right: 5px"><a class="btn" id="enter_sign" style="text-tecoration: none;" asp-controller="Home" asp-action="Login">Sign In</a></li>
+                <li class="float: right"><a class="btn" id="enter_sign" style="text-tecoration: none;" asp-controller="Home" asp-action="Register">Sign Up</a></li>
+            }
+            else
+            {
+                <li><a class="btn btns" style="text-tecoration: none;" asp-controller="Blog" asp-action="Post">Create Post</a></li>
+                <li><a class="btn btns" style="text-tecoration: none;" asp-controller="Blog" asp-action="Logout">Log Out</a></li>
+            }
+            @* <div class="user_nav" style="">
+                <i class="fa-regular fa-bell border_radius bell_icon"></i>
+                <img class="user_img" src="https://cdn-icons-png.flaticon.com/512/219/219983.png" alt="">
+            </div> *@
+        </div>
+        
+    </nav>
+    <br><br><br><br>
+    @RenderBody()
+
+    @* <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> *@
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

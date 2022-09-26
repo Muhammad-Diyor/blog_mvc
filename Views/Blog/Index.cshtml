@@ -1,0 +1,49 @@
+@model IEnumerable<PostViewModel>
+@{
+    static string LimitLength(string source, int maxLength)
+      {
+         if (source.Length <= maxLength)
+         {
+            return source;
+         }
+
+         return source.Substring(0, maxLength)+"...";
+      }
+}
+<section class="blog" id="blog">
+    <div class="container">
+        <div class="row">
+        @foreach (var mod in Model)
+        {
+                <div class="col-md-4" style="margin-top:20px">
+                    <div class="card">
+                        <img class="card-img-top" src="@mod.Image" alt="@mod.Title">
+                        <div class="card-body">
+                            <h5 class="card-title">@mod.Title</h5>
+                            <p class="card-text">@LimitLength(mod.Content!,80)</p>
+                            @if(mod.IsEdited == true)
+                            {
+                                <p>Is edited</p>
+                            }
+                            <span style="font-size:14px;"><img src="~/img/date-svgrepo-com.svg" alt="@mod.CreatedDate" style="width:18px"> @mod.CreatedDate</span> 
+                            <a href="/Blog/Article/@mod.Id" class="btn btn-primary" style="float:right;">More</a>
+                        </div>
+                    </div>
+                </div>
+                
+        }
+        
+        @* <div class="row">
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="@Model.Image" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">@Model.Title</h5>
+                        <p class="card-text">@Model.Content</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div> *@
+    </div>
+</section>

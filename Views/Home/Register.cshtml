@@ -1,0 +1,36 @@
+@model RegisterViewModel
+<div class="blur_div"></div>
+<section class="register_menu" id="register_menu">
+        <div class="sign_up">
+            <i class="fa-solid fa-xmark identity_x sign_up_x"></i>
+            <h1>Sign Up</h1>
+
+            <form method="post" class="identity_form">
+                <input hidden="true" asp-for="@Model.ReturnUrl">
+                <div class="form-group">
+                    <label class="identity_label" for="exampleInputEmail1">Username</label>
+                    <input asp-for="@Model.Username" type="text" class="identity_input form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Username">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label class="identity_label" for="exampleInputPassword1">Password</label>
+                    <input asp-for="@Model.Password" type="password" class="identity_input form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <br>
+                <button type="submit" class="identity_btn btns" asp-controller="Home" asp-action="Register">
+                    Sign Up
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <br>
+                <a id="open_in" class="identity_a identity_login" asp-controller="Home" asp-action="Login">Already have accaunt</a>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        var sign_up_x = document.querySelector(".sign_up_x");
+        sign_up_x.addEventListener("click", function () {
+            sign_up.style.display = "none";
+            blur_div.style.display = "none"
+        })
+    </script>

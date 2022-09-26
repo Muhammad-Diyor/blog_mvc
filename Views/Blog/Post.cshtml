@@ -1,0 +1,26 @@
+@model CreateOrUpdateViewModel
+<section class="home" id="home">
+    @if(User.Identity!.IsAuthenticated)
+    {
+        <div class="home_header">
+            <form method="post" class="upload_form" enctype="multipart/form-data">
+                <input asp-for="@Model.Title" type="text" placeholder="Title..">
+                <textarea asp-for="@Model.Content" class="text_area" placeholder="Content"></textarea>
+                <div class="upload_footer">
+                    <div>
+                        <p>Minimum 10 characters</p>
+                    </div>
+                    <div>
+                        
+                        <label asp-for="@Model.Image" accept="image/*" class="upload_file btns" for="upload" style="padding-top: 15px;">
+                            <i class="fa-solid fa-link"></i>
+                            Upload Image
+                        </label>
+                        <input asp-for="@Model.Image" type="file" accept="image/*" id="upload" style="display:none ;">
+                        <button type="submit" class="upload_button btns">Upload Post</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    }
+</section>

@@ -1,0 +1,10 @@
+﻿
+<div style="width:100%; text-align:center;">
+        <br>
+        <h1> <img class="hi_img" src="https://a24.biz/media/images/emoji/wave.webp" alt=""> Assalomu Alaykum! </h1>
+        @if(User.Identity!.IsAuthenticated)
+        {
+            <p><span style="font-weight:600 ;">@User.Identity?.Name</span> bizning saytga xush kelibsiz!</p>
+        }
+        <p></p>
+</div>
