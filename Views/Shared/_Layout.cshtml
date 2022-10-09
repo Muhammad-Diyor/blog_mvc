@@ -40,7 +40,9 @@
             <div class="navigation">
                 <div class="nav_body">
                     <ul>
-                        <li class='@(Url.RouteUrl(ViewContext.RouteData.Values) == "/" ? "active" : "")'>Home</li>
+                        <li class='@(Url.RouteUrl(ViewContext.RouteData.Values) == "/" ? "active" : "")'>
+                            <a style="text-tecoration: none; color: black;" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
                         <li class='@(Url.RouteUrl(ViewContext.RouteData.Values) == "/Blog" ? "active" : "")'>
                             <a style="text-tecoration: none; color: black;" asp-controller="Blog" asp-action="Index">Blog</a>
                         </li>
